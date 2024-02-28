@@ -40,10 +40,10 @@
             this.lbl_exit.AutoSize = true;
             this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
             this.lbl_exit.Font = new System.Drawing.Font("Segoe Script", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_exit.Location = new System.Drawing.Point(52, 23);
-            this.lbl_exit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_exit.Location = new System.Drawing.Point(104, 44);
+            this.lbl_exit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_exit.Name = "lbl_exit";
-            this.lbl_exit.Size = new System.Drawing.Size(198, 74);
+            this.lbl_exit.Size = new System.Drawing.Size(397, 146);
             this.lbl_exit.TabIndex = 0;
             this.lbl_exit.Text = "Do you want to\n quit the game?";
             // 
@@ -59,12 +59,13 @@
             this.btn_exit.FillColor = System.Drawing.Color.OldLace;
             this.btn_exit.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.ForeColor = System.Drawing.Color.Red;
-            this.btn_exit.Location = new System.Drawing.Point(261, 10);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_exit.Location = new System.Drawing.Point(509, 19);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(30, 32);
+            this.btn_exit.Size = new System.Drawing.Size(73, 71);
             this.btn_exit.TabIndex = 1;
             this.btn_exit.Text = "X";
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_yes_exit
             // 
@@ -78,12 +79,13 @@
             this.btn_yes_exit.FillColor = System.Drawing.Color.Transparent;
             this.btn_yes_exit.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_yes_exit.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_yes_exit.Location = new System.Drawing.Point(52, 110);
-            this.btn_yes_exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_yes_exit.Location = new System.Drawing.Point(100, 212);
+            this.btn_yes_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_yes_exit.Name = "btn_yes_exit";
-            this.btn_yes_exit.Size = new System.Drawing.Size(63, 32);
+            this.btn_yes_exit.Size = new System.Drawing.Size(148, 62);
             this.btn_yes_exit.TabIndex = 2;
             this.btn_yes_exit.Text = "YES";
+            this.btn_yes_exit.Click += new System.EventHandler(this.btn_yes_exit_Click);
             // 
             // btn_no_exit
             // 
@@ -97,25 +99,26 @@
             this.btn_no_exit.FillColor = System.Drawing.Color.Transparent;
             this.btn_no_exit.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_no_exit.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_no_exit.Location = new System.Drawing.Point(172, 110);
-            this.btn_no_exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_no_exit.Location = new System.Drawing.Point(344, 212);
+            this.btn_no_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_no_exit.Name = "btn_no_exit";
-            this.btn_no_exit.Size = new System.Drawing.Size(63, 32);
+            this.btn_no_exit.Size = new System.Drawing.Size(148, 62);
             this.btn_no_exit.TabIndex = 3;
             this.btn_no_exit.Text = "NO";
+            this.btn_no_exit.Click += new System.EventHandler(this.btn_no_exit_Click);
             // 
             // Exit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(300, 162);
+            this.ClientSize = new System.Drawing.Size(600, 312);
             this.Controls.Add(this.btn_no_exit);
             this.Controls.Add(this.btn_yes_exit);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.lbl_exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Exit";
             this.Text = "Exit";
             this.ResumeLayout(false);

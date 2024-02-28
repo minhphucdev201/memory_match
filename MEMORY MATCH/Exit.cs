@@ -17,5 +17,19 @@ namespace MEMORY_MATCH
             InitializeComponent();
         }
 
+        private void btn_yes_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_no_exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
