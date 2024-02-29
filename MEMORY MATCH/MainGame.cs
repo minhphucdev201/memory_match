@@ -19,6 +19,7 @@ namespace MEMORY_MATCH
         public Timer timer;
         private TimeSpan elapsedTime;
         private bool isPaused;
+        private MainOption mainoption;
         public MainGame()
         {
             InitializeComponent();
@@ -53,8 +54,10 @@ namespace MEMORY_MATCH
         private void MainGame_Load(object sender, EventArgs e)
         {
             // Lấy thời điểm bắt đầu chơi từ form trang chủ
-            MainOption mainoption = (MainOption)Application.OpenForms["MainOption"];
-            elapsedTime = mainoption.ElapsedTime;
+            //MainOption mainoption = (MainOption)Application.OpenForms["MainOption"];
+            //elapsedTime = mainoption.ElapsedTime;
+            MainGame maingame = (MainGame)Application.OpenForms["MainGame"];
+            elapsedTime = maingame.elapsedTime;
             isPaused = false;
             // Bắt đầu đếm thời gian
             timer.Start();

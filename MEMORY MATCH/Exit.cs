@@ -12,9 +12,11 @@ namespace MEMORY_MATCH
 {
     public partial class Exit : Form
     {
-        public Exit()
+        private MainOption mainoption;
+        public Exit(MainOption form)
         {
             InitializeComponent();
+            mainoption = form;
         }
 
         private void btn_yes_exit_Click(object sender, EventArgs e)
@@ -25,11 +27,13 @@ namespace MEMORY_MATCH
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Close();
+            mainoption.SetButtonClickedStatus(false);
         }
 
         private void btn_no_exit_Click(object sender, EventArgs e)
         {
             Close();
+            mainoption.SetButtonClickedStatus(false);
         }
     }
 }

@@ -17,11 +17,13 @@ namespace MEMORY_MATCH
         {
             InitializeComponent();
             mainGameForm = mainGame;
+            
         }
-
+       
         private void btn_quit_pause_Click(object sender, EventArgs e)
         {
-             Application.Exit();
+            this.Close();
+            mainGameForm.Close();
         }
 
         private void btn_continue_pause_Click(object sender, EventArgs e)

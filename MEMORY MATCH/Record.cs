@@ -12,9 +12,17 @@ namespace MEMORY_MATCH
 {
     public partial class Record : Form
     {
-        public Record()
+        private MainOption mainoption;
+        public Record(MainOption form)
         {
             InitializeComponent();
+            this.mainoption = form;
+        }
+
+        private void btn_exit_record_Click(object sender, EventArgs e)
+        {
+            mainoption.SetButtonClickedStatus(false);
+            Close();
         }
     }
 }

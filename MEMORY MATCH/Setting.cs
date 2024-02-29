@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace MEMORY_MATCH
 {
     public partial class Setting : Form
     {
         private MainGame mainGameForm2;
+
         public Setting(MainGame maingame2)
         {
             InitializeComponent();
@@ -27,7 +29,9 @@ namespace MEMORY_MATCH
 
         private void rdb_on_CheckedChanged(object sender, EventArgs e)
         {
-
+            // Tạo một đối tượng SoundPlayer và tải file nhạc từ resources
+            //SoundPlayer player = new SoundPlayer(Properties.Resources.nhaccute);
+            //player.Play();
         }
     }
 }

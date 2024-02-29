@@ -12,9 +12,17 @@ namespace MEMORY_MATCH
 {
     public partial class EndGame : Form
     {
-        public EndGame()
+        private MainGame maingame;
+        public EndGame(MainGame maingame)
         {
             InitializeComponent();
+            this.maingame = maingame;   
+        }
+
+        private void btn_mainoption_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            maingame.Close();
         }
     }
 }
