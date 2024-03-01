@@ -39,10 +39,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(36, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 87);
+            this.label1.Size = new System.Drawing.Size(119, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "PAUSE";
             // 
@@ -58,10 +58,10 @@
             this.btn_playagain_pause.FillColor = System.Drawing.Color.OldLace;
             this.btn_playagain_pause.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_playagain_pause.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_playagain_pause.Location = new System.Drawing.Point(48, 138);
-            this.btn_playagain_pause.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_playagain_pause.Location = new System.Drawing.Point(24, 72);
+            this.btn_playagain_pause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_playagain_pause.Name = "btn_playagain_pause";
-            this.btn_playagain_pause.Size = new System.Drawing.Size(267, 69);
+            this.btn_playagain_pause.Size = new System.Drawing.Size(134, 36);
             this.btn_playagain_pause.TabIndex = 3;
             this.btn_playagain_pause.Text = "Play Again";
             // 
@@ -77,10 +77,10 @@
             this.btn_continue_pause.FillColor = System.Drawing.Color.OldLace;
             this.btn_continue_pause.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_continue_pause.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_continue_pause.Location = new System.Drawing.Point(48, 234);
-            this.btn_continue_pause.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_continue_pause.Location = new System.Drawing.Point(24, 122);
+            this.btn_continue_pause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_continue_pause.Name = "btn_continue_pause";
-            this.btn_continue_pause.Size = new System.Drawing.Size(267, 69);
+            this.btn_continue_pause.Size = new System.Drawing.Size(134, 36);
             this.btn_continue_pause.TabIndex = 4;
             this.btn_continue_pause.Text = "Continue";
             this.btn_continue_pause.Click += new System.EventHandler(this.btn_continue_pause_Click);
@@ -97,27 +97,28 @@
             this.btn_quit_pause.FillColor = System.Drawing.Color.OldLace;
             this.btn_quit_pause.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quit_pause.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_quit_pause.Location = new System.Drawing.Point(48, 330);
-            this.btn_quit_pause.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_quit_pause.Location = new System.Drawing.Point(24, 172);
+            this.btn_quit_pause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_quit_pause.Name = "btn_quit_pause";
-            this.btn_quit_pause.Size = new System.Drawing.Size(267, 69);
+            this.btn_quit_pause.Size = new System.Drawing.Size(134, 36);
             this.btn_quit_pause.TabIndex = 5;
             this.btn_quit_pause.Text = "Quit";
             this.btn_quit_pause.Click += new System.EventHandler(this.btn_quit_pause_Click);
             // 
             // Pause
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(375, 469);
+            this.ClientSize = new System.Drawing.Size(188, 244);
             this.Controls.Add(this.btn_quit_pause);
             this.Controls.Add(this.btn_continue_pause);
             this.Controls.Add(this.btn_playagain_pause);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Pause";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pause";
             this.ResumeLayout(false);
             this.PerformLayout();

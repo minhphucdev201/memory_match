@@ -42,10 +42,10 @@
             this.lbl_setting.AutoSize = true;
             this.lbl_setting.BackColor = System.Drawing.Color.Transparent;
             this.lbl_setting.Font = new System.Drawing.Font("Segoe Script", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_setting.Location = new System.Drawing.Point(152, 14);
-            this.lbl_setting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_setting.Location = new System.Drawing.Point(76, 7);
+            this.lbl_setting.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_setting.Name = "lbl_setting";
-            this.lbl_setting.Size = new System.Drawing.Size(290, 87);
+            this.lbl_setting.Size = new System.Drawing.Size(148, 44);
             this.lbl_setting.TabIndex = 0;
             this.lbl_setting.Text = "SETTING";
             // 
@@ -54,10 +54,10 @@
             this.lbl_sound.AutoSize = true;
             this.lbl_sound.BackColor = System.Drawing.Color.Transparent;
             this.lbl_sound.Font = new System.Drawing.Font("Segoe Script", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sound.Location = new System.Drawing.Point(18, 103);
-            this.lbl_sound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_sound.Location = new System.Drawing.Point(9, 54);
+            this.lbl_sound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_sound.Name = "lbl_sound";
-            this.lbl_sound.Size = new System.Drawing.Size(196, 80);
+            this.lbl_sound.Size = new System.Drawing.Size(99, 40);
             this.lbl_sound.TabIndex = 1;
             this.lbl_sound.Text = "Sound";
             // 
@@ -66,10 +66,10 @@
             this.lbl_volume.AutoSize = true;
             this.lbl_volume.BackColor = System.Drawing.Color.Transparent;
             this.lbl_volume.Font = new System.Drawing.Font("Segoe Script", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_volume.Location = new System.Drawing.Point(18, 181);
-            this.lbl_volume.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_volume.Location = new System.Drawing.Point(9, 94);
+            this.lbl_volume.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_volume.Name = "lbl_volume";
-            this.lbl_volume.Size = new System.Drawing.Size(220, 80);
+            this.lbl_volume.Size = new System.Drawing.Size(112, 40);
             this.lbl_volume.TabIndex = 2;
             this.lbl_volume.Text = "Volume";
             // 
@@ -78,10 +78,10 @@
             this.rdb_on.AutoSize = true;
             this.rdb_on.BackColor = System.Drawing.Color.Transparent;
             this.rdb_on.Font = new System.Drawing.Font("Segoe Script", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb_on.Location = new System.Drawing.Point(268, 108);
-            this.rdb_on.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdb_on.Location = new System.Drawing.Point(134, 56);
+            this.rdb_on.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rdb_on.Name = "rdb_on";
-            this.rdb_on.Size = new System.Drawing.Size(130, 77);
+            this.rdb_on.Size = new System.Drawing.Size(69, 41);
             this.rdb_on.TabIndex = 3;
             this.rdb_on.TabStop = true;
             this.rdb_on.Text = "On";
@@ -93,24 +93,27 @@
             this.rdb_off.AutoSize = true;
             this.rdb_off.BackColor = System.Drawing.Color.Transparent;
             this.rdb_off.Font = new System.Drawing.Font("Segoe Script", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb_off.Location = new System.Drawing.Point(404, 108);
-            this.rdb_off.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdb_off.Location = new System.Drawing.Point(202, 56);
+            this.rdb_off.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rdb_off.Name = "rdb_off";
-            this.rdb_off.Size = new System.Drawing.Size(133, 77);
+            this.rdb_off.Size = new System.Drawing.Size(70, 41);
             this.rdb_off.TabIndex = 4;
             this.rdb_off.TabStop = true;
             this.rdb_off.Text = "Off";
             this.rdb_off.UseVisualStyleBackColor = false;
+            this.rdb_off.CheckedChanged += new System.EventHandler(this.rdb_off_CheckedChanged);
             // 
             // volumetrackbar
             // 
             this.volumetrackbar.BackColor = System.Drawing.Color.Transparent;
-            this.volumetrackbar.Location = new System.Drawing.Point(268, 209);
-            this.volumetrackbar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.volumetrackbar.Location = new System.Drawing.Point(134, 109);
+            this.volumetrackbar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.volumetrackbar.Name = "volumetrackbar";
-            this.volumetrackbar.Size = new System.Drawing.Size(286, 36);
+            this.volumetrackbar.Size = new System.Drawing.Size(143, 19);
             this.volumetrackbar.TabIndex = 5;
             this.volumetrackbar.ThumbColor = System.Drawing.Color.Green;
+            this.volumetrackbar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.volumetrackbar_Scroll);
+          
             // 
             // btn_exit_setting
             // 
@@ -125,20 +128,20 @@
             this.btn_exit_setting.FillColor = System.Drawing.Color.OldLace;
             this.btn_exit_setting.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit_setting.ForeColor = System.Drawing.Color.Red;
-            this.btn_exit_setting.Location = new System.Drawing.Point(510, 14);
-            this.btn_exit_setting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_exit_setting.Location = new System.Drawing.Point(255, 7);
+            this.btn_exit_setting.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_exit_setting.Name = "btn_exit_setting";
-            this.btn_exit_setting.Size = new System.Drawing.Size(72, 73);
+            this.btn_exit_setting.Size = new System.Drawing.Size(36, 38);
             this.btn_exit_setting.TabIndex = 6;
             this.btn_exit_setting.Text = "X";
             this.btn_exit_setting.Click += new System.EventHandler(this.btn_exit_setting_Click);
             // 
             // Setting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(600, 312);
+            this.ClientSize = new System.Drawing.Size(300, 162);
             this.Controls.Add(this.btn_exit_setting);
             this.Controls.Add(this.volumetrackbar);
             this.Controls.Add(this.rdb_off);
@@ -147,7 +150,7 @@
             this.Controls.Add(this.lbl_sound);
             this.Controls.Add(this.lbl_setting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Setting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setting";

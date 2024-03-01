@@ -1,0 +1,171 @@
+﻿namespace MEMORY_MATCH
+{
+    partial class Setting_1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btn_exit_setting = new Guna.UI2.WinForms.Guna2Button();
+            this.volumetrackbar = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.rdb_off = new System.Windows.Forms.RadioButton();
+            this.rdb_on = new System.Windows.Forms.RadioButton();
+            this.lbl_volume = new System.Windows.Forms.Label();
+            this.lbl_sound = new System.Windows.Forms.Label();
+            this.lbl_setting = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // btn_exit_setting
+            // 
+            this.btn_exit_setting.BackColor = System.Drawing.Color.Transparent;
+            this.btn_exit_setting.BorderRadius = 19;
+            this.btn_exit_setting.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btn_exit_setting.BorderThickness = 2;
+            this.btn_exit_setting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_exit_setting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_exit_setting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_exit_setting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_exit_setting.FillColor = System.Drawing.Color.OldLace;
+            this.btn_exit_setting.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit_setting.ForeColor = System.Drawing.Color.Red;
+            this.btn_exit_setting.Location = new System.Drawing.Point(282, 28);
+            this.btn_exit_setting.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_exit_setting.Name = "btn_exit_setting";
+            this.btn_exit_setting.Size = new System.Drawing.Size(36, 38);
+            this.btn_exit_setting.TabIndex = 13;
+            this.btn_exit_setting.Text = "X";
+            this.btn_exit_setting.Click += new System.EventHandler(this.btn_exit_setting_Click);
+            // 
+            // volumetrackbar
+            // 
+            this.volumetrackbar.BackColor = System.Drawing.Color.Transparent;
+            this.volumetrackbar.Location = new System.Drawing.Point(158, 129);
+            this.volumetrackbar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.volumetrackbar.Name = "volumetrackbar";
+            this.volumetrackbar.Size = new System.Drawing.Size(143, 19);
+            this.volumetrackbar.TabIndex = 12;
+            this.volumetrackbar.ThumbColor = System.Drawing.Color.Green;
+            this.volumetrackbar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.volumetrackbar_Scroll);
+            // 
+            // rdb_off
+            // 
+            this.rdb_off.AutoSize = true;
+            this.rdb_off.BackColor = System.Drawing.Color.Transparent;
+            this.rdb_off.Font = new System.Drawing.Font("Segoe Script", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_off.Location = new System.Drawing.Point(226, 77);
+            this.rdb_off.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.rdb_off.Name = "rdb_off";
+            this.rdb_off.Size = new System.Drawing.Size(70, 41);
+            this.rdb_off.TabIndex = 11;
+            this.rdb_off.TabStop = true;
+            this.rdb_off.Text = "Off";
+            this.rdb_off.UseVisualStyleBackColor = false;
+            this.rdb_off.CheckedChanged += new System.EventHandler(this.rdb_off_CheckedChanged);
+            // 
+            // rdb_on
+            // 
+            this.rdb_on.AutoSize = true;
+            this.rdb_on.BackColor = System.Drawing.Color.Transparent;
+            this.rdb_on.Font = new System.Drawing.Font("Segoe Script", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_on.Location = new System.Drawing.Point(158, 77);
+            this.rdb_on.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.rdb_on.Name = "rdb_on";
+            this.rdb_on.Size = new System.Drawing.Size(69, 41);
+            this.rdb_on.TabIndex = 10;
+            this.rdb_on.TabStop = true;
+            this.rdb_on.Text = "On";
+            this.rdb_on.UseVisualStyleBackColor = false;
+            this.rdb_on.CheckedChanged += new System.EventHandler(this.rdb_on_CheckedChanged);
+            // 
+            // lbl_volume
+            // 
+            this.lbl_volume.AutoSize = true;
+            this.lbl_volume.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_volume.Font = new System.Drawing.Font("Segoe Script", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_volume.Location = new System.Drawing.Point(34, 115);
+            this.lbl_volume.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_volume.Name = "lbl_volume";
+            this.lbl_volume.Size = new System.Drawing.Size(112, 40);
+            this.lbl_volume.TabIndex = 9;
+            this.lbl_volume.Text = "Volume";
+            // 
+            // lbl_sound
+            // 
+            this.lbl_sound.AutoSize = true;
+            this.lbl_sound.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sound.Font = new System.Drawing.Font("Segoe Script", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sound.Location = new System.Drawing.Point(34, 74);
+            this.lbl_sound.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_sound.Name = "lbl_sound";
+            this.lbl_sound.Size = new System.Drawing.Size(99, 40);
+            this.lbl_sound.TabIndex = 8;
+            this.lbl_sound.Text = "Sound";
+            // 
+            // lbl_setting
+            // 
+            this.lbl_setting.AutoSize = true;
+            this.lbl_setting.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_setting.Font = new System.Drawing.Font("Segoe Script", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_setting.Location = new System.Drawing.Point(98, 21);
+            this.lbl_setting.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_setting.Name = "lbl_setting";
+            this.lbl_setting.Size = new System.Drawing.Size(148, 44);
+            this.lbl_setting.TabIndex = 7;
+            this.lbl_setting.Text = "SETTING";
+            // 
+            // Setting_1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OldLace;
+            this.ClientSize = new System.Drawing.Size(343, 182);
+            this.Controls.Add(this.btn_exit_setting);
+            this.Controls.Add(this.volumetrackbar);
+            this.Controls.Add(this.rdb_off);
+            this.Controls.Add(this.rdb_on);
+            this.Controls.Add(this.lbl_volume);
+            this.Controls.Add(this.lbl_sound);
+            this.Controls.Add(this.lbl_setting);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Setting_1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Setting_1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private Guna.UI2.WinForms.Guna2Button btn_exit_setting;
+        private Guna.UI2.WinForms.Guna2TrackBar volumetrackbar;
+        private System.Windows.Forms.RadioButton rdb_off;
+        private System.Windows.Forms.RadioButton rdb_on;
+        private System.Windows.Forms.Label lbl_volume;
+        private System.Windows.Forms.Label lbl_sound;
+        private System.Windows.Forms.Label lbl_setting;
+    }
+}

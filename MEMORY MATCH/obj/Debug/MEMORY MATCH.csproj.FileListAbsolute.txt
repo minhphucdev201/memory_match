@@ -66,3 +66,47 @@ C:\Users\Hi\Documents\Phat_Trien_UD_Desktop\memory_match\MEMORY MATCH\obj\Debug\
 C:\Users\Hi\Documents\Phat_Trien_UD_Desktop\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.csproj.CopyComplete
 C:\Users\Hi\Documents\Phat_Trien_UD_Desktop\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.exe
 C:\Users\Hi\Documents\Phat_Trien_UD_Desktop\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.pdb
+C:\Users\Hi\Documents\Phat_Trien_UD_Desktop\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Setting_1.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.csproj.AssemblyReference.cache
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.EndGame.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Exit.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.MainOption.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.GameOver.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Howtoplay.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.MainGame.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Pause.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Play.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.PlayAgain.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Record.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Setting_1.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Setting.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.csproj.GenerateResource.cache
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.exe
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.pdb
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\MEMORY MATCH.exe.config
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\MEMORY MATCH.exe
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\MEMORY MATCH.pdb
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\Guna.UI2.dll
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Properties.Resources.resources
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.csproj.CoreCompileInputs.cache
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY MATCH.csproj.CopyComplete
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Asio.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Core.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Midi.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Wasapi.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.WinForms.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.WinMM.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\System.Security.AccessControl.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\System.Security.Principal.Windows.dll
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Asio.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Core.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Midi.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.Wasapi.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.WinForms.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.WinMM.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\System.Security.AccessControl.xml
+C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\System.Security.Principal.Windows.xml

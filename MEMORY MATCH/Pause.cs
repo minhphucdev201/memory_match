@@ -12,24 +12,26 @@ namespace MEMORY_MATCH
 {
     public partial class Pause : Form
     {
-        private MainGame mainGameForm;
+        private MainGame maingame;
         public Pause(MainGame mainGame)
         {
             InitializeComponent();
-            mainGameForm = mainGame;
+            maingame = mainGame;
             
         }
        
         private void btn_quit_pause_Click(object sender, EventArgs e)
         {
             this.Close();
-            mainGameForm.Close();
+            maingame.Close();
+            maingame.SetButtonClickedStatus(false);
         }
 
         private void btn_continue_pause_Click(object sender, EventArgs e)
         {
             Close();
-            mainGameForm.ResumeTimer(); // Tiếp tục đếm thời gian trong MainGame
+            maingame.ResumeTimer(); // Tiếp tục đếm thời gian trong MainGame
+            maingame.SetButtonClickedStatus(false);
         }
 
     }

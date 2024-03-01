@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGame));
             this.panel_level = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_score = new Guna.UI2.WinForms.Guna2Panel();
@@ -92,6 +93,7 @@
             this.panel_score.Name = "panel_score";
             this.panel_score.Size = new System.Drawing.Size(336, 62);
             this.panel_score.TabIndex = 2;
+            this.panel_score.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_score_Paint);
             // 
             // label2
             // 
@@ -148,46 +150,65 @@
             // guna2PictureBox6
             // 
             this.guna2PictureBox6.BorderRadius = 2;
+            this.guna2PictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2PictureBox6.Image = global::MEMORY_MATCH.Properties.Resources.imagecard2;
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(720, 250);
             this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(150, 156);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox6.TabIndex = 5;
             this.guna2PictureBox6.TabStop = false;
+            this.guna2PictureBox6.Click += new System.EventHandler(this.guna2PictureBox6_Click);
             // 
             // guna2PictureBox5
             // 
+            this.guna2PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2PictureBox5.Image = global::MEMORY_MATCH.Properties.Resources.imagecard2;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(464, 250);
             this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(150, 156);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox5.TabIndex = 4;
             this.guna2PictureBox5.TabStop = false;
+            this.guna2PictureBox5.Click += new System.EventHandler(this.guna2PictureBox5_Click);
             // 
             // guna2PictureBox4
             // 
+            this.guna2PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2PictureBox4.Image = global::MEMORY_MATCH.Properties.Resources.imagecard2;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(218, 250);
             this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(150, 156);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox4.TabIndex = 3;
             this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
             // 
             // guna2PictureBox3
             // 
+            this.guna2PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2PictureBox3.Image = global::MEMORY_MATCH.Properties.Resources.imagecard2;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(720, 38);
             this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(150, 156);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 2;
             this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
             // 
             // guna2PictureBox2
             // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.ForestGreen;
+            this.guna2PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2PictureBox2.Image = global::MEMORY_MATCH.Properties.Resources.imagecard2;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(464, 38);
             this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -200,8 +221,13 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Black;
+            this.guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.guna2PictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.ErrorImage")));
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.LightGreen;
+            this.guna2PictureBox1.Image = global::MEMORY_MATCH.Properties.Resources.imagecard2;
             this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.InitialImage")));
             this.guna2PictureBox1.Location = new System.Drawing.Point(218, 38);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -220,11 +246,11 @@
             this.btn_setting.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_setting.ImageRotate = 0F;
             this.btn_setting.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_setting.Location = new System.Drawing.Point(1096, 12);
+            this.btn_setting.Location = new System.Drawing.Point(1096, 14);
             this.btn_setting.Margin = new System.Windows.Forms.Padding(4);
             this.btn_setting.Name = "btn_setting";
             this.btn_setting.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_setting.Size = new System.Drawing.Size(86, 98);
+            this.btn_setting.Size = new System.Drawing.Size(84, 98);
             this.btn_setting.TabIndex = 5;
             this.btn_setting.Click += new System.EventHandler(this.btn_setting_Click);
             // 
@@ -291,7 +317,6 @@
         private Guna.UI2.WinForms.Guna2Panel panel_times;
         private System.Windows.Forms.Label lbl_time;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
@@ -299,5 +324,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2ImageButton btn_setting;
         private Guna.UI2.WinForms.Guna2ImageButton btn_pause;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
