@@ -19,7 +19,7 @@ namespace MEMORY_MATCH
         public MainOption()
         {
             InitializeComponent();
-           BackgroundSound.PlayMusic();
+           //BackgroundSound.PlayMusic();
         }
 
         //public SoundPlayer player;

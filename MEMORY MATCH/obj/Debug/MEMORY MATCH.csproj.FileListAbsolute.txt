@@ -73,7 +73,6 @@ C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Exit.resources
 C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.MainOption.resources
 C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.GameOver.resources
 C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Howtoplay.resources
-C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.MainGame.resources
 C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Pause.resources
 C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.Play.resources
 C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.PlayAgain.resources
@@ -110,3 +109,4 @@ C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.WinForms.xml
 C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\NAudio.WinMM.xml
 C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\System.Security.AccessControl.xml
 C:\Csharp\memory_match\MEMORY MATCH\bin\Debug\System.Security.Principal.Windows.xml
+C:\Csharp\memory_match\MEMORY MATCH\obj\Debug\MEMORY_MATCH.MainGame.resources
