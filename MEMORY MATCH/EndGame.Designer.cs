@@ -75,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 230);
+            this.label3.Location = new System.Drawing.Point(80, 231);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 73);
@@ -114,6 +114,7 @@
             this.btn_return.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btn_return.Size = new System.Drawing.Size(102, 89);
             this.btn_return.TabIndex = 8;
+            this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 
             // EndGame
             // 
@@ -130,7 +131,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EndGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EndGame";
+            this.Load += new System.EventHandler(this.EndGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

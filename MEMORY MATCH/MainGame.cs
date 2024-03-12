@@ -12,107 +12,55 @@ using System.Windows.Forms;
 
 using System.Drawing;
 
-
-
-
-
 namespace MEMORY_MATCH
 {
     public partial class MainGame : Form
     {
-        //private int score = 0;
-        private int level = 1;
+        private MainGame maingame;
+        private MainOption mainoption;
+        private bool isPaused;
+        public int score = 0;
+        public int level = 1;
         private int rows = 2;
         private int cols = 3;
         private int DefaultCardSize = 300;
         private int CardWidth = 0;
 
         private const int HideCardsDelay = 1000;
-
+        private int imgIndex;
         private List<PictureBox> cards;
         private PictureBox firstCard;
         private int matchedCardsCount;
-        static string basePath = "C:\\Csharp\\WindowsFormsMatchGame\\Recources";
+        //static string basePath = "Properties.Resources";
+
         // list các hình ảnh
-        private List<string> imagePaths = new List<string>
+        private List<Image> imagePaths = new List<Image>
         {
-              basePath+ "\\card1.jpg",
-              basePath+ "\\card2.jpg",
-              basePath+ "\\card3.jpg",
-              basePath+ "\\card4.jpg",
-              basePath+ "\\card5.jpg",
-              basePath+ "\\card6.jpg",
-              basePath+ "\\card7.jpg",
-              basePath+ "\\card8.jpg",
-              basePath+ "\\card9.jpg",
-              basePath+ "\\card10.jpg"
+            Properties.Resources.card1,
+Properties.Resources.card2,
+Properties.Resources.card3,
+Properties.Resources.card4,
+Properties.Resources.card5,
+Properties.Resources.card6,
+Properties.Resources.card7,
+Properties.Resources.card8,
+Properties.Resources.card9,
+Properties.Resources.card10
             // Add paths to other images here
         };
-        public Timer timer;
-        private TimeSpan elapsedTime;
-        private bool isPaused;
-        // Để chỉ được nhấn 1 lần ra 1 form
-        private bool isButtonClicked = false;
-        public void SetButtonClickedStatus(bool status)
-        {
-            isButtonClicked = status;
-        }
 
-        //Tính thời gian chơi
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            if (!isPaused)
-            {
-                elapsedTime = elapsedTime.Add(TimeSpan.FromSeconds(1));
-
-                // Hiển thị thời gian lên Label
-                lbl_time.Text = "Times: " + elapsedTime.ToString(@"hh\:mm\:ss");
-            }
-        }
-        //private void MainGame_Load(object sender, EventArgs e)
-        //{
-        //    MainGame maingame = (MainGame)Application.OpenForms["MainGame"];
-        //    elapsedTime = maingame.elapsedTime;
-        //    isPaused = false;
-        //    //Bắt đầu đếm thời gian
-        //    timer.Start();
-        //}
         // Nút Pause
         private void btn_pause_Click(object sender, EventArgs e)
         {
-            if (!isButtonClicked)
-            {
-                isButtonClicked = true;
-            }
-            else
-            {
-                return; // Không có hiệu lực nếu đã click liên tiếp 
-            }
             Pause pause = new Pause(this);
             pause.Show();
             isPaused = !isPaused;
-            timer.Stop();
         }
-        public void ResumeTimer()
-        {
-            isPaused = false;
-            timer.Start();
-        }
-        // Nút Setting
         private void btn_setting_Click(object sender, EventArgs e)
         {
-            if (!isButtonClicked)
-            {
-                isButtonClicked = true;
-            }
-            else
-            {
-                return; // Không có hiệu lực nếu đã click liên tiếp 
-            }
-            Setting setting = new Setting(this);
+            Setting setting = new Setting(maingame, mainoption);
             setting.Show();
             isPaused = !isPaused;
-            timer.Stop();
         }
         //private MainOption mainoption;
         public MainGame()
@@ -120,26 +68,29 @@ namespace MEMORY_MATCH
             InitializeComponent();
             //score = 0;
             InitializeGame();
-            // Khởi tạo Timer
-            timer = new Timer();
-            timer.Interval = 1000; // Mỗi giây
-            timer.Tick += Timer_Tick;
         }
-        private void InitializeGame()
+
+
+        // Tạo Card
+        public void InitializeGame()
         {
 
-            //UpdateLevelScore(); // Khởi tạo điểm ban đầ
+            //UpdateLevelScore(); // Khởi tạo điểm ban đầu
             Controls.Add(panel_level);
             Controls.Add(panel_score);
             Controls.Add(panel_times);
             Controls.Add(btn_setting);
             Controls.Add(btn_pause);
-            
-          
-           
+            label1.Text = "Level: \n  " + level.ToString();
+            flipsCount = 0;
+            maxFlips = GetMaxFlipsForLevel(level); // Set maxFlips for the current level
+            // add Flips
+            lbl_time.Text = $"Times: {maxFlips}";
+
+
             cards = new List<PictureBox>();
             matchedCardsCount = 0;
-            // Create and shuffle the cards
+            // Tạo card bằng số hàng nhân số cột(2 card giống nhau)
             int cardCount = rows * cols;
             CardWidth = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(DefaultCardSize / cols)));
             for (int i = 0; i < cardCount / 2; i++)
@@ -183,14 +134,14 @@ namespace MEMORY_MATCH
             int imageCount = rows * cols; // Tổng số hình ảnh trong lưới
             PictureBox card = new PictureBox();
             card.Size = new Size(CardWidth, CardWidth);
-            card.Tag = imagePaths[imageIndex];
+            card.Tag = imageIndex;
             card.SizeMode = PictureBoxSizeMode.StretchImage;
-
             //string imagePath = imagePaths[imageIndex];
-            Image img = Image.FromFile("C:\\Csharp\\WindowsFormsMatchGame\\Recources\\imagecard2.jpg");
+            Image img = Properties.Resources.imagecard2; 
             card.Image = ResizeImageToGrid(img, imageSize, imageSize);
             return card;
         }
+
         // hàm xáo trộn các thẻ hình
         private void ShuffleCards()
         {
@@ -226,7 +177,29 @@ namespace MEMORY_MATCH
         // hàm xủ lí click thẻ hình 
         private bool isProcessing = false; // Biến kiểm tra xem có đang xử lý các click trước đó hay không
 
+        // Tạo số lần lật tối đa cho 3 level
+        private int maxFlipsLevel1 = 6;
+        private int maxFlipsLevel2 = 16;
+        private int maxFlipsLevel3 = 26;
+        private int flipsCount;
+        private int maxFlips;
+        
+        //Phương thức lấy số lần lật cho level hiện tại
+        private int GetMaxFlipsForLevel(int currentLevel)
+        {
+            switch (currentLevel)
+            {
+                case 1:
+                    return maxFlipsLevel1;
+                case 2:
+                    return maxFlipsLevel2;
+                case 3:
+                    return maxFlipsLevel3;
+                default:
+                    return maxFlipsLevel1; // Default to level 1 if level is not recognized
+            }
 
+        }
         private void Card_Click(object sender, EventArgs e)
         {
             if (isProcessing)
@@ -236,12 +209,14 @@ namespace MEMORY_MATCH
             }
 
             PictureBox currentCard = (PictureBox)sender;
-            string str = currentCard.Tag.ToString();
-            currentCard.Image = Image.FromFile(str);
+            int imageIndex = (int)currentCard.Tag;
+            currentCard.Image = imagePaths[imageIndex];
+            // lấy hình ảnh để hiện thị click
 
             if (firstCard == null)
             {
                 firstCard = currentCard;
+                flipsCount++;
             }
             else
             {
@@ -255,6 +230,13 @@ namespace MEMORY_MATCH
                 {
                     // Hai hình giống nhau
                     isProcessing = true; // Đánh dấu đang xử lý
+
+                    // Giảm 1 Flips
+                    maxFlips--;
+                    lbl_time.Text = "Times " + maxFlips.ToString();
+                    // Cộng điểm
+                    score += 100;
+                    label2.Text = "Score: " + score.ToString();
 
                     Timer timer = new Timer();
                     timer.Interval = 10;
@@ -287,16 +269,16 @@ namespace MEMORY_MATCH
                                 if (level < 3) // Level tối đa
                                 {
                                     level++;
+                                    label1.Text = "Level: \n  "+level.ToString();
                                     rows++;
                                     cols++;
                                     Controls.Clear();
                                     InitializeGame();
-
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Congratulations! You've completed all levels.");
-                                    Close();
+                                    EndGame endgame = new EndGame(this);
+                                    endgame.Show();
                                 }
                             }
                             // Tăng điểm và cập nhật label điểm
@@ -305,36 +287,69 @@ namespace MEMORY_MATCH
 
                             isProcessing = false; // Đánh dấu kết thúc xử lý
                         }
+
                     };
 
-                    timer.Start();
+                timer.Start();
                 }
                 else
                 {
                     // Hai hình không khớp
                     isProcessing = true; // Đánh dấu đang xử lý
 
+                    // Decrease maxFlips by 1 for each flip
+                    maxFlips--;
+                    lbl_time.Text = "Times " + maxFlips.ToString();
                     currentCard.Enabled = false;
                     Timer timer = new Timer();
                     timer.Interval = 500;
                     timer.Tick += (s, args) =>
                     {
                         timer.Stop();
-                        currentCard.Image = Image.FromFile("C:\\Csharp\\WindowsFormsMatchGame\\Recources\\imagecard2.jpg");
-                        firstCard.Image = Image.FromFile("C:\\Csharp\\WindowsFormsMatchGame\\Recources\\imagecard2.jpg");
+                        currentCard.Image = Properties.Resources.imagecard2;
+                        firstCard.Image = Properties.Resources.imagecard2;
                         firstCard = null;
                         currentCard.Enabled = true;
 
                         isProcessing = false; // Đánh dấu kết thúc xử lý
                     };
-                    timer.Start();
+                timer.Start();
                 }
             }
+                // Check if maxFlips becomes zero after decrement, trigger game over
+                if (maxFlips <= 0)
+                {
+                    GameOver gameOver = new GameOver(this);
+                    gameOver.Show();
+                    return;
+                }
         }
+        //ResetGame
+        public void ResetGame()
+        {
+            // Reset game state
+            level = 1;
+            score = 0;
+            rows = 2;
+            cols = 3;
 
+            // Clear controls and initialize the game again
+            Controls.Clear();
+            InitializeGame();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainGame_Load(object sender, EventArgs e)
+        {
+            isPaused = false;
         }
     }
 }

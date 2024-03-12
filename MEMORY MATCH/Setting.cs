@@ -15,18 +15,26 @@ namespace MEMORY_MATCH
     public partial class Setting : Form
     {
         private MainGame maingame;
-
-        public Setting(MainGame maingame2)
+        private MainOption mainoption;
+        public Setting(MainGame maingame2, MainOption mainoption)
         {
             InitializeComponent();
             maingame = maingame2;
+            this.mainoption = mainoption;
         }
 
         private void btn_exit_setting_Click(object sender, EventArgs e)
         {
             Close();
-            maingame.ResumeTimer(); // Tiếp tục đếm thời gian trong MainGame
-            maingame.SetButtonClickedStatus(false);
+            //if (maingame != null)
+            //{
+            //    maingame.SetButtonClickedStatus(false);
+            //}
+
+            //if (mainoption != null)
+            //{
+            //    mainoption.SetButtonClickedStatus(false);
+            //}
         }
      
         private void rdb_on_CheckedChanged(object sender, EventArgs e)

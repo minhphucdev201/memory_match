@@ -24,5 +24,18 @@ namespace MEMORY_MATCH
             this.Close();
             maingame.Close();
         }
+
+        private void EndGame_Load(object sender, EventArgs e)
+        {
+            label2.Text = "Score: " + maingame.score;
+            label3.Text = "Level: " + maingame.level;
+        }
+
+        private void btn_return_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            PlayAgain playagain = new PlayAgain(maingame);
+            playagain.Show();
+        }
     }
 }

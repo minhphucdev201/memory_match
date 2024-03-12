@@ -14,7 +14,9 @@ namespace MEMORY_MATCH
 {
     public partial class MainOption : Form
     {
-        public TimeSpan ElapsedTime { get; private set; }
+        private MainGame maingame;
+        private MainOption mainoption;
+       // public TimeSpan ElapsedTime { get; private set; }
         
         public MainOption()
         {
@@ -50,10 +52,9 @@ namespace MEMORY_MATCH
         // Xử lý nút Play
         private void btn_play_Click(object sender, EventArgs e)
         {
+         // this.Hide(); giúp tắt trang mainoption nhưng hiện đang bị lỗi
             MainGame f = new MainGame();
             f.Show();
-            ElapsedTime = TimeSpan.Zero; // bắt đầu tính thời gian chơi game 
-       
         }
 
         // Xử lý nút Exit
@@ -74,8 +75,8 @@ namespace MEMORY_MATCH
         //Xử lý nút Setting
         private void btn_setting_Click(object sender, EventArgs e)
         {
-            Setting_1 setting_1= new Setting_1(this);
-            setting_1.Show();
+            Setting setting= new Setting(maingame,mainoption);
+            setting.Show();
         }
 
         // Xử lý nút Record
@@ -90,17 +91,6 @@ namespace MEMORY_MATCH
             {
                 return; // Không có hiệu lực nếu đã click liên tiếp 
             }
-            //try
-            //{
-            //    SoundManager.Player = new SoundPlayer(Properties.Resources.win);
-            //    SoundManager.Player.Play();
-            //    SoundManager.IsPlaying = true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    // Xử lý ngoại lệ và thông báo lỗi
-            //    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            //}
             Record record = new Record(this);
             record.Show();
         }
@@ -108,21 +98,18 @@ namespace MEMORY_MATCH
         // trình chạy MainOption
         private void MainOption_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    SoundManager.Player = new SoundPlayer(Properties.Resources.nhacnen1);
-            
-            //    SoundManager.Player.Play();
-            //    SoundManager.IsPlaying = true;
+            try
+            {
+                SoundManager.Player = new SoundPlayer(Properties.Resources.nhacnen1);
 
-
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    // Xử lý ngoại lệ và thông báo lỗi
-            //    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
-            //}
+                SoundManager.Player.Play();
+                SoundManager.IsPlaying = true;
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ và thông báo lỗi
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+            }
         }
     }
 }
