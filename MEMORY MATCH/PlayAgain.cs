@@ -27,6 +27,14 @@ namespace MEMORY_MATCH
 
         private void btn_yes_playagain_Click(object sender, EventArgs e)
         {
+            this.Close();
+            maingame.Close();
+            MainGame mg=new MainGame();
+            mg.Show();
+        }
+
+        private void btn_exit_playagain_Click(object sender, EventArgs e)
+        {
 
         }
     }

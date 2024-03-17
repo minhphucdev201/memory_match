@@ -16,5 +16,21 @@ namespace MEMORY_MATCH
         {
             InitializeComponent();
         }
+
+        private void btn_no_play_Click(object sender, EventArgs e)
+        {
+            MainGame maingame= new MainGame();
+            maingame.Show();
+            this.Close();
+        }
+
+        private void btn_exit_play_Click(object sender, EventArgs e)
+        {
+            this.Close ();
+        }
+
+        private void btn_yes_play_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

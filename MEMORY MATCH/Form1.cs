@@ -1,4 +1,5 @@
-﻿using NAudio.Wave;
+﻿
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +17,12 @@ namespace MEMORY_MATCH
     {
         private MainGame maingame;
         private MainOption mainoption;
-       // public TimeSpan ElapsedTime { get; private set; }
-        
+        // public TimeSpan ElapsedTime { get; private set; }
+
         public MainOption()
         {
             InitializeComponent();
-           //BackgroundSound.PlayMusic();
+            //BackgroundSound.PlayMusic();
         }
 
         //public SoundPlayer player;
@@ -37,6 +38,7 @@ namespace MEMORY_MATCH
         // Xử lý nút Howtoplay
         private void btn_howtoplay_Click(object sender, EventArgs e)
         {
+            EventClick();
             if (!isButtonClicked)
             {
                 isButtonClicked = true;
@@ -52,14 +54,16 @@ namespace MEMORY_MATCH
         // Xử lý nút Play
         private void btn_play_Click(object sender, EventArgs e)
         {
-         // this.Hide(); giúp tắt trang mainoption nhưng hiện đang bị lỗi
-            MainGame f = new MainGame();
-            f.Show();
+            EventClick();
+            // this.Hide(); giúp tắt trang mainoption nhưng hiện đang bị lỗi
+            Play play = new Play();
+            play.Show();
         }
 
         // Xử lý nút Exit
         private void btn_exit_Click(object sender, EventArgs e)
         {
+            EventClick();
             if (!isButtonClicked)
             {
                 isButtonClicked = true;
@@ -68,14 +72,16 @@ namespace MEMORY_MATCH
             {
                 return; // Không có hiệu lực nếu đã click liên tiếp 
             }
-            Exit exit=new Exit(this);
+            Exit exit = new Exit();
             exit.Show();
         }
 
         //Xử lý nút Setting
         private void btn_setting_Click(object sender, EventArgs e)
         {
-            Setting setting= new Setting(maingame,mainoption);
+            EventClick();
+            SoundManager.IsPlaying = true;
+            Setting setting = new Setting();
             setting.Show();
         }
 
@@ -83,6 +89,7 @@ namespace MEMORY_MATCH
         //private SoundPlayer recordPlayer; // Thêm biến recordPlayer để quản lý âm thanh của nút btn_record
         private void btn_record_Click(object sender, EventArgs e)
         {
+            EventClick();
             if (!isButtonClicked)
             {
                 isButtonClicked = true;
@@ -111,5 +118,24 @@ namespace MEMORY_MATCH
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
+        //Xử lý sự kiện click phát âm thanh khi click 1 nút
+        public void EventClick()
+        {
+            SoundManager.Player = new SoundPlayer(Properties.Resources.click_button_140881);
+            SoundManager.Player.PlaySync(); // Chờ phát nhạc "win" hoàn thành
+            if (SoundManager.Player != null && SoundManager.IsPlaying)
+            {
+                SoundManager.Player = new SoundPlayer(Properties.Resources.nhacnen1);
+                SoundManager.Player.Play(); // Phát nhạc "nhacnen1"
+            }
+            else
+            {
+                SoundManager.Player = new SoundPlayer(Properties.Resources.nhacnen1);
+                SoundManager.Player.Stop();
+                SoundManager.IsPlaying = false;
+            }
+        }
     }
 }
+
+

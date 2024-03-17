@@ -21,6 +21,7 @@ namespace MEMORY_MATCH
 
         private void btn_exit_record_Click(object sender, EventArgs e)
         {
+            mainoption.EventClick();
             mainoption.SetButtonClickedStatus(false);
             Close();
         }

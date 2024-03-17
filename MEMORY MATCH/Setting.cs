@@ -14,17 +14,28 @@ namespace MEMORY_MATCH
 {
     public partial class Setting : Form
     {
-        private MainGame maingame;
-        private MainOption mainoption;
-        public Setting(MainGame maingame2, MainOption mainoption)
+        public Setting()
         {
             InitializeComponent();
-            maingame = maingame2;
-            this.mainoption = mainoption;
+            // Load the saved setting for the radio button
+            bool isSoundOn = Properties.Settings.Default.SoundOn;
+            if (isSoundOn)
+            {
+                rdb_on.Checked = true;
+                BackgroundSound.PlayMusic(Properties.Resources.nhacnen1);
+            }
+            else
+            {
+                rdb_off.Checked = true;
+            }
         }
 
         private void btn_exit_setting_Click(object sender, EventArgs e)
         {
+            EventClick();
+            // Save the state of the radio button before closing the form
+            Properties.Settings.Default.SoundOn = rdb_on.Checked;
+            Properties.Settings.Default.Save();
             Close();
             //if (maingame != null)
             //{
@@ -39,12 +50,14 @@ namespace MEMORY_MATCH
      
         private void rdb_on_CheckedChanged(object sender, EventArgs e)
         {
+           // mainoption.EventClick();
             try
             {
                 if (rdb_on.Checked == true)
                 {
-                    BackgroundSound.PlayMusic();
-                }
+                    BackgroundSound.PlayMusic(Properties.Resources.nhacnen1);
+                    SoundManager.IsPlaying = true;
+                } 
             }
             catch (Exception ex)
             {
@@ -68,8 +81,21 @@ namespace MEMORY_MATCH
 
             BackgroundSound.ChangeVolume(volume);
         }
-
-       
-       
+       private void EventClick()
+        {
+            SoundManager.Player = new SoundPlayer(Properties.Resources.click_button_140881);
+            SoundManager.Player.PlaySync(); // Chờ phát nhạc "win" hoàn thành
+            if (SoundManager.Player != null && SoundManager.IsPlaying)
+            {
+                SoundManager.Player = new SoundPlayer(Properties.Resources.nhacnen1);
+                SoundManager.Player.Play(); // Phát nhạc "nhacnen1"
+            }
+            else
+            {
+                SoundManager.Player = new SoundPlayer(Properties.Resources.nhacnen1);
+                SoundManager.Player.Stop();
+                SoundManager.IsPlaying = false;
+            }
+        }
     }
 }

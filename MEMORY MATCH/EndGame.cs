@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace MEMORY_MATCH
         public EndGame(MainGame maingame)
         {
             InitializeComponent();
-            this.maingame = maingame;   
+            this.maingame = maingame;
         }
 
         private void btn_mainoption_Click(object sender, EventArgs e)
@@ -37,5 +38,6 @@ namespace MEMORY_MATCH
             PlayAgain playagain = new PlayAgain(maingame);
             playagain.Show();
         }
+        
     }
 }

@@ -216,6 +216,7 @@
     <None Include="Resources\home.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\true.wav" />
     <None Include="Resources\win.wav" />
     <None Include="Resources\card1.bmp" />
     <None Include="Resources\card1.jpg" />
@@ -232,8 +233,14 @@
     <None Include="Resources\card9.jpg" />
     <None Include="Resources\card10.jpg" />
     <None Include="Resources\card7.jpg" />
+    <None Include="Resources\false.wav" />
+    <None Include="Resources\level_up.wav" />
+    <None Include="Resources\Lose.wav" />
+    <None Include="Resources\click-button-140881.wav" />
+    <None Include="Resources\multi-pop-1-188165.wav" />
     <Content Include="Resources\pause.png" />
     <Content Include="Resources\return.png" />
+    <None Include="Resources\selcet_image.wav" />
     <Content Include="Resources\setting.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

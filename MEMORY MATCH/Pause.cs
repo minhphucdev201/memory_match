@@ -13,17 +13,17 @@ namespace MEMORY_MATCH
     public partial class Pause : Form
     {
         private MainGame maingame;
-        //private MainOption mainoption;
         public Pause(MainGame mainGame)
         {
             InitializeComponent();
-            maingame = mainGame;
+            this.maingame = mainGame;
         }
        
         private void btn_quit_pause_Click(object sender, EventArgs e)
         {
             this.Close();
-            maingame.Close();
+            Exit exit = new Exit();
+            exit.Show();
             // Lỗi Play chưa lưu được nên bị lặp lại nhiều lần. có thể phát triển thêm sau
             //// Kiểm tra nếu biến mainoption đã được khởi tạo
             //if (mainoption == null)
@@ -46,5 +46,11 @@ namespace MEMORY_MATCH
             //maingame.SetButtonClickedStatus(false);
         }
 
+        private void btn_playagain_pause_Click(object sender, EventArgs e)
+        {
+            this.Close ();
+            PlayAgain playagain = new PlayAgain(maingame);
+            playagain.Show();
+        }
     }
 }

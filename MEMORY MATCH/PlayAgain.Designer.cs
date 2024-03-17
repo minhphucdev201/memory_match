@@ -59,7 +59,7 @@
             this.btn_yes_playagain.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_yes_playagain.ForeColor = System.Drawing.Color.ForestGreen;
             this.btn_yes_playagain.Location = new System.Drawing.Point(110, 212);
-            this.btn_yes_playagain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_yes_playagain.Margin = new System.Windows.Forms.Padding(4);
             this.btn_yes_playagain.Name = "btn_yes_playagain";
             this.btn_yes_playagain.Size = new System.Drawing.Size(147, 62);
             this.btn_yes_playagain.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.btn_no_playagain.Font = new System.Drawing.Font("Segoe Script", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_no_playagain.ForeColor = System.Drawing.Color.ForestGreen;
             this.btn_no_playagain.Location = new System.Drawing.Point(344, 212);
-            this.btn_no_playagain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_no_playagain.Margin = new System.Windows.Forms.Padding(4);
             this.btn_no_playagain.Name = "btn_no_playagain";
             this.btn_no_playagain.Size = new System.Drawing.Size(147, 62);
             this.btn_no_playagain.TabIndex = 3;
@@ -99,11 +99,12 @@
             this.btn_exit_playagain.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit_playagain.ForeColor = System.Drawing.Color.Red;
             this.btn_exit_playagain.Location = new System.Drawing.Point(522, 19);
-            this.btn_exit_playagain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_exit_playagain.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit_playagain.Name = "btn_exit_playagain";
             this.btn_exit_playagain.Size = new System.Drawing.Size(73, 71);
             this.btn_exit_playagain.TabIndex = 4;
             this.btn_exit_playagain.Text = "X";
+            this.btn_exit_playagain.Click += new System.EventHandler(this.btn_exit_playagain_Click);
             // 
             // PlayAgain
             // 
@@ -116,7 +117,7 @@
             this.Controls.Add(this.btn_yes_playagain);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PlayAgain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlayAgain";

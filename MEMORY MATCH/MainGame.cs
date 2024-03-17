@@ -52,13 +52,13 @@ Properties.Resources.card10
         // Nút Pause
         private void btn_pause_Click(object sender, EventArgs e)
         {
-            Pause pause = new Pause(this);
+            Pause pause = new Pause(maingame);
             pause.Show();
             isPaused = !isPaused;
         }
         private void btn_setting_Click(object sender, EventArgs e)
         {
-            Setting setting = new Setting(maingame, mainoption);
+            Setting setting = new Setting();
             setting.Show();
             isPaused = !isPaused;
         }
@@ -110,8 +110,8 @@ Properties.Resources.card10
             {
                 for (int col = 0; col < cols; col++)
                 {
-                    int x = ((cardIndex % cols) * (CardWidth + 10)) + 100;
-                    int y = ((cardIndex / cols) * (CardWidth + 10)  ) + 100;
+                    int x = ((cardIndex % cols) * (CardWidth + 10)) + 160;
+                    int y = ((cardIndex / cols) * (CardWidth + 10)) + 110;
 
                     PictureBox card = cards[cardIndex];
                     card.Location = new Point(x, y);
@@ -168,19 +168,13 @@ Properties.Resources.card10
             return resizedImage;
         }
 
-        // hàm cập nhật điểm và hiện thị
-        //private void UpdateLevelScore()
-        //{
-        //    score += 100;
-        //    label1.Text = "Score: " + (score - 100).ToString();
-        //}
         // hàm xủ lí click thẻ hình 
         private bool isProcessing = false; // Biến kiểm tra xem có đang xử lý các click trước đó hay không
 
         // Tạo số lần lật tối đa cho 3 level
-        private int maxFlipsLevel1 = 6;
-        private int maxFlipsLevel2 = 16;
-        private int maxFlipsLevel3 = 26;
+        private int maxFlipsLevel1 = 5;
+        private int maxFlipsLevel2 = 15;
+        private int maxFlipsLevel3 = 25;
         private int flipsCount;
         private int maxFlips;
         
@@ -299,7 +293,7 @@ Properties.Resources.card10
 
                     // Decrease maxFlips by 1 for each flip
                     maxFlips--;
-                    lbl_time.Text = "Times " + maxFlips.ToString();
+                    lbl_time.Text = "Times: " + maxFlips.ToString();
                     currentCard.Enabled = false;
                     Timer timer = new Timer();
                     timer.Interval = 500;
@@ -321,6 +315,7 @@ Properties.Resources.card10
                 {
                     GameOver gameOver = new GameOver(this);
                     gameOver.Show();
+                    lbl_time.Text = "Times: 0";
                     return;
                 }
         }
